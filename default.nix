@@ -6,8 +6,9 @@
     hash = "sha256-SG3JQLybhY/fMX+XqmB/BKhQSBB0N1VRqa+H6laVUPE=";
   };
   dontBuild = true;
+  dontUnpack = true;
   installPhase = ''
-    install -Dm755 AppleColorEmoji $out/share/fonts/truetype/AppleColorEmoji.ttf
+    install -Dm755 ${src} $out/share/fonts/truetype/AppleColorEmoji.ttf
   '';
   meta = with lib; {
     description = "Apple Emoji font for linux";
